@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  // Iterate through the array
+  for(let i=0; i < array.length; i++){
+    // iterate through the array again 
+    for(let n= i+1; n < array.length; n++){
+      // adding the numbers and comparing them to target
+      if(array[i]+array[n] === target){
+        return true
+      }
+    }
+  }
+
 }
 
 /* 
@@ -8,10 +18,17 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  takes an array and a target number 
+  if the numbers in the array can add up to the target, true
+  if not false
 */
 
 /*
   Add written explanation of your solution here
+
+  I want to iterate the array to single out the numbers, 
+  created a for loop to iterate through the array with different variables
+  then compared the sum of those variables to the target
 */
 
 // You can run `node index.js` to view these console logs
